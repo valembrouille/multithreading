@@ -1,10 +1,11 @@
 name: CI
+on: [push]
 
 jobs:
   uv-example:
     name: python
     runs-on: ubuntu-latest
-    on: [push]
+
 
     steps:
       - uses: actions/checkout@v4
