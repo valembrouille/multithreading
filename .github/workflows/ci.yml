@@ -24,3 +24,12 @@ jobs:
 
       - name: Run test unitaire
         run: uv run python -m unittest
+
+      - name: Set up Python ${{ matrix.python-version }}
+        run: uv python install ${{ matrix/python-version }}
+
+
+strategy:
+   matrix:
+      python-version:
+        - "3.10"
